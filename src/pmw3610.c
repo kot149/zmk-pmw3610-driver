@@ -13,16 +13,10 @@
 #include <zephyr/kernel.h>
 #include <zephyr/sys/byteorder.h>
 #include <zephyr/input/input.h>
-#include <zephyr/device.h>
-#include <zephyr/sys/dlist.h>
-#include <drivers/behavior.h>
 #include <zmk/keymap.h>
 #include <zmk/behavior.h>
-#include <zmk/keys.h>
 #include <zmk/behavior_queue.h>
-#include <zmk/event_manager.h>
 #include <zmk/events/position_state_changed.h>
-#include <zmk/events/layer_state_changed.h>
 #include "pmw3610.h"
 
 #include <zephyr/logging/log.h>
