@@ -606,7 +606,7 @@ static inline void calculate_scroll_acceleration(int16_t x, int16_t y, struct pi
         if (delta_time > 0 && delta_time < 100) {
             float speed = (float)movement / delta_time;
             float base_sensitivity = (float)CONFIG_PMW3610_SCROLL_ACCELERATION_SENSITIVITY;
-            float acceleration = 1.0f + (base_sensitivity - 1.0f) * (1.0f / (1.0f + expf(-0.2f * (speed - 10.0f))));
+            float acceleration = 1.0f + (base_sensitivity - 1.0f) * (1.0f / (1.0f + (float)exp(-0.2 * (double)(speed - 10.0f))));
 
             *accel_x = (int32_t)(x * acceleration);
             *accel_y = (int32_t)(y * acceleration);
